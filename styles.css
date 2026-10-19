@@ -1,0 +1,52 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    gap:20px;
+
+}
+
+.seat{
+    background-color: #2563eb;
+    color: white;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    font-size: 70px;
+}
+
+.seats-container {
+    display: grid;
+    grid-auto-columns: 150px;
+    grid-auto-rows: 150px ;
+    gap: 15px;
+       grid-template-areas:
+        "box-1 box-2 box-3 box-4"
+        "box-5 box-6 box-7 box-8"
+        "box-9 box-10 box-11 box-12"
+        "box-13 box-14 box-15 box-16"
+        "box-17 box-18 box-19 box-20"
+
+        ;
+        
+}
+
+.logo {
+    width: 100px;
+    float: left;
+}
+
+.enter-face {
+    display: flex;
+    width:100%;
+    gap: 20px;
+}
+
+.unfomation {
+    width: 200%;
+}
