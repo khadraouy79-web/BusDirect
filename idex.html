@@ -26,7 +26,7 @@
         <button class="seat" style="grid-area: box-5">5</button>
         <button class="seat" style="grid-area: box-6">6</button>
         <button class="seat" style="grid-area: box-7">7</button>
-        <button class="seat" style="grid-area: box-8">8</dbuttoniv>
+        <button class="seat" style="grid-area: box-8">8</button>
         <button class="seat" style="grid-area: box-9">9</button>
         <button class="seat" style="grid-area: box-10">10</button>
         <button class="seat" style="grid-area: box-11">11</button>
@@ -41,52 +41,66 @@
         <button class="seat" style="grid-area: box-20">20</button>
         
      </div>
-     <aside class="unfomation">
-        <h2 class="ticket-titel">Réserver une place</h2>
-        
-     <table>
-      <div class="table1">
-       <tr>
-         <td><label for="Name">Nom et Prénom</label><br><input type="text" placeholder="Nom Complet*" class="name" id="name"></td>
-        </tr>
-        <tr>
-            <td><label for="Tickets">Tickets</label><br><input type="text" placeholder="Ticket nuber*" class="ticket" id="ticket"></td>
-        </tr>
-        
-      </div>
-     </table>
+     
+<aside class="unfomation">
 
-           <h2 class="ticket-titel">Modifier une place</h2>
-        
-     <table>
-      <div class="table2">
-       <tr>
-         <td><label for="Name">Nom et Prénom</label><br><input type="text" placeholder="Nom Complet*" class="name" id="name"></td>
-        </tr>
-        <tr>
-            <td><label for="Tickets">Tickets</label><br><input type="text" placeholder="Ticket nuber*" class="ticket" id="ticket"></td>
-        </tr>
-          </table>
+  <h2>Réserver une place</h2>
+  <form id="reserveForm">
+    <label for="reserveName">Nom et Prénom</label>
+    <input type="text" id="reserveName" placeholder="Nom complet" required>
 
-           <h2 class="ticket-titel">Supprimer une réservation</h2>
-        
-     <table>
-      <div class="table3">
-       <tr>
-         <td><label for="Name">Nom et Prénom</label><br><input type="text" placeholder="Nom Complet*" class="name" id="name"></td>
-        </tr>
-        <tr>
-            <td><label for="Tickets">Tickets</label><br><input type="text" placeholder="Ticket nuber*" class="ticket" id="ticket"></td>
-        </tr> 
-        
-      </div>
-     </table>
+    <label for="reserveSeat">Numéro du siège (facultatif)</label>
+    <select id="reserveSeat">
+      <option value="">Premier siège libre</option>
+    </select>
 
+    <button type="submit">Réserver</button>
+    <p id="reserveMessage" aria-live="polite"></p>
+  </form>
 
+  <hr>
 
+  <h2>Modifier une place</h2>
+  <form id="modifyForm">
+    <label for="modifyPassenger">Passager</label>
+    <select id="modifyPassenger" required>
+      <option value="">Choisir un passager</option>
+    </select>
 
+    <label for="modifyName">Nouveau nom</label>
+    <input type="text" id="modifyName" required>
 
-     </aside>
+    <label for="modifySeat">Nouveau siège (facultatif)</label>
+    <select id="modifySeat">
+      <option value="">Garder le siège actuel</option>
+    </select>
+
+    <button type="submit">Modifier</button>
+    <p id="modifyMessage" aria-live="polite"></p>
+  </form>
+
+  <hr>
+
+  <h2>Supprimer une réservation</h2>
+  <form id="deleteForm">
+    <label for="deletePassenger">Passager</label>
+    <select id="deletePassenger" required>
+      <option value="">Choisir un passager</option>
+    </select>
+
+    <button type="submit">Supprimer</button>
+    <p id="deleteMessage" aria-live="polite"></p>
+  </form>
+
+  <hr>
+
+  <h2>Statistiques</h2>
+  <p>Places libres : <span id="availableCount">20</span></p>
+  <p>Places occupées : <span id="occupiedCount">0</span></p>
+  <p>Recette totale : <span id="revenue">0</span> DH</p>
+
+</aside>
+
     </section>
     </main>
 
