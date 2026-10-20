@@ -12,4 +12,30 @@ const modifySeat = document.querySelector("#const modifySeat");
 const deleteForm = document.querySelector("#deleteForm");
 const deletePassenger = document.querySelector("#deletePassenger");
 
+const availableCount = document.querySelector("#availableCount");
+const occupiedCount = document.querySelector("#occupiedCount");
+const revenue = document.querySelector("#revenue");
+
+// Tableau li fih les réservations
+let reservations = JSON.parse(
+  localStorage.getItem("busReservations")
+) || [];
+
+// Sauvegarder les réservations
+function saveReservations() {
+  localStorage.setItem(
+    "busReservations",
+    JSON.stringify(reservations)
+  );
+}
+
+
+
+
+
+
+
+
+
+
 
