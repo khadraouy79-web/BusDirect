@@ -12,8 +12,8 @@ body {
 }
 
 .seat{
-    background-color: #2563eb;
-    color: white;
+    
+    
     border-radius: 10px;
     display: grid;
     place-items: center;
@@ -22,8 +22,8 @@ body {
 
 .seats-container {
     display: grid;
-    grid-auto-columns: 150px;
-    grid-auto-rows: 150px ;
+    grid-auto-columns: 120px;
+    grid-auto-rows: 120px ;
     gap: 15px;
        grid-template-areas:
         "box-1 box-2 box-3 box-4"
@@ -31,9 +31,12 @@ body {
         "box-9 box-10 box-11 box-12"
         "box-13 box-14 box-15 box-16"
         "box-17 box-18 box-19 box-20"
-
         ;
         
+}
+
+.seat:nth-child(4n + 3) {
+    grid-column-start: 4;
 }
 
 .logo {
@@ -43,10 +46,58 @@ body {
 
 .enter-face {
     display: flex;
-    width:100%;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 30px;
 }
+
 
 .unfomation {
     width: 200%;
 }
+
+.en-tete {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.tete-left {
+    margin-right: auto;
+}
+
+
+
+.unfomation {
+background-color: #F5F5F4;
+border-radius: 8px;
+border-collapse: separate;
+border-spacing: 20px 15px;
+ width: 500px;
+}
+
+.unfomation table td {
+     
+     padding: 3%;
+    
+}
+
+.unfomation table {
+    border-collapse: separate;
+    border-spacing: 20px 15px;
+    width: 100%;
+}
+
+
+.unfomation input {
+border: 1px solid #A8A29E ;
+border-radius: 5px;
+padding: 10px;
+ 
+}
+
+.seats-container .seat:active {
+scale: 1.05px;
+}
+
+
