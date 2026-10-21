@@ -16,19 +16,18 @@ const availableCount = document.querySelector("#availableCount");
 const occupiedCount = document.querySelector("#occupiedCount");
 const revenue = document.querySelector("#revenue");
 
-// Tableau li fih les réservations
+
+
 let reservations = JSON.parse(
   localStorage.getItem("busReservations")
 ) || [];
 
-// Sauvegarder les réservations
 function saveReservations() {
   localStorage.setItem(
     "busReservations",
     JSON.stringify(reservations)
   );
 }
-
 
 
 

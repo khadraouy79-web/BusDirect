@@ -11,13 +11,29 @@ body {
 
 }
 
-.seat{
-    
-    
+
+
+.seat {
+    background-color: #22c55e;
+    color: white;
+    border: none;
+    cursor: pointer;
     border-radius: 10px;
     display: grid;
     place-items: center;
     font-size: 70px;
+}
+
+
+.seat.reserved {
+    background-color: #ef4444;
+    color: white;
+    cursor: not-allowed;
+}
+
+
+.seat.selected {
+    outline: 3px solid #2563eb;
 }
 
 .seats-container {
@@ -96,8 +112,70 @@ padding: 10px;
  
 }
 
-.seats-container .seat:active {
-scale: 1.05px;
+.seats-container .seat {
+transition: transform (2s ease);
+
+
+}
+.seat:focus .seats-container:focus{
+    transform: scale(1);
 }
 
 
+
+
+
+
+
+
+/* Sièges libres et occupés */
+.seat.free {
+    background-color: #16a34a;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.seat.occupied {
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    overflow-wrap: anywhere;
+}
+
+/* Formulaires */
+.unfomation form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+}
+
+.unfomation input,
+.unfomation select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #A8A29E;
+    border-radius: 5px;
+}
+
+.unfomation form button {
+    padding: 10px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.unfomation form button:hover {
+    background-color: #1d4ed8;
+}
+
+.unfomation hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #d6d3d1;
+}
