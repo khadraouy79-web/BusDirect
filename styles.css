@@ -50,6 +50,7 @@ body {
         ;
     flex: 1;
     min-width: 0;
+    justify-content: center;
 }
 
 .seat:nth-child(4n + 3) {
