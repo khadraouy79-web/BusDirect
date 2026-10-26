@@ -39,7 +39,7 @@ body {
 .seats-container {
     display: grid;
     grid-auto-columns: 120px;
-    grid-auto-rows: 120px ;
+    grid-auto-rows: 100px ;
     gap: 15px;
        grid-template-areas:
         "box-1 box-2 box-3 box-4"
