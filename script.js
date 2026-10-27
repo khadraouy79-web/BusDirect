@@ -19,6 +19,7 @@ const deleteForm = document.querySelector("#deleteForm");
 const deletePassenger = document.querySelector("#deletePassenger");
 
 
+
 for (let i = 0; i < seats.length; i++) {
   seats[i].dataset.seat = seats[i].textContent.trim();
 }
@@ -43,7 +44,7 @@ function updateSeats() {
       seats[i].disabled = true;
     } else {
       seats[i].textContent = seatNumber;
-      seats[i].style.backgroundColor = "green";
+      seats[i].style.backgroundColor = "#26f471be";
       seats[i].style.color = "white";
       seats[i].disabled = false;
     }
@@ -179,7 +180,7 @@ modifyPassenger.addEventListener("change", function() {
     modifyName.value = "";
   }
 
-  // Update available seats
+
   const oldSeat = Number(modifyPassenger.value);
 
   modifySeat.innerHTML =
@@ -284,9 +285,6 @@ deleteForm.addEventListener("submit", function(event) {
 });
 
 
-updateDisplay();
-
-
 
 function updateDeleteList() {
   deletePassenger.innerHTML = '<option value="">Choisir un passager</option>';
@@ -301,7 +299,51 @@ function updateDeleteList() {
   }
 }
 
+
+
+
+const freePlases = 20
+const availableCount = document.querySelector("#availableCount");
+function updateAvailabelSeat(){
+let free = freePlases;
+for(let i=0 ; i < reservations.length ; i++){
+  free--;
+}
+availableCount.textContent = free ;
+}
+
+
+
+const occupiedCount = document.querySelector("#occupiedCount");
+function updateOccupiedSeats(){
+let taken = 0;
+for(let i=0 ; i < reservations.length ; i++){
+  taken++;
+}
+occupiedCount.textContent = taken ;
+}
+
+
+const ticketPrice = 80
+const revenue = document.querySelector("#revenue");
+function updateTotalPrice(){
+let total = 0;
+for(let i=0 ; i < reservations.length ; i++){
+  total += ticketPrice;
+}
+revenue.textContent = total ;
+}
+
+
+function updateDisplay() {
+
 updateSeats();
 updateModifyList();
 updateDeleteList();
 
+updateAvailabelSeat();
+updateOccupiedSeats();
+updateTotalPrice();
+
+}
+updateDisplay();

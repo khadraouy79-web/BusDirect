@@ -12,13 +12,23 @@
 <body>
     <header class="en-tete">
       
-  <img class="logo" src="imgs/logo.svg">  
-  <h1 class="tete-left">BusDirect</h1>
-  <h2 class="tete-right">réservation</h2>
- 
+  <img class="logo" src="imgs/logo.png">  
+  <a class="tete-left"></a>
+  <nav>
+  <ul class="menu">
+  <li><a class="tete-right">réservation</a></li>
+  </ul>
+ </nav>
     </header>
     
     <main>
+   <section class="bus-stuts">  
+        <h2>Statistiques</h2>
+  <p class="text-green-600">Places libres : <span id="availableCount">20</span></p><br>
+  <p class="text-red-600">Places occupées : <span id="occupiedCount">0</span></p><br>
+  <p class="text-blue-600">Recette totale : <span id="revenue">0</span> DH</p>
+     </section>  
+
     <section class="enter-face" >
      <div class="seats-container bg-gray-200  rounded-lg px-6 py-8 ring shadow-xl ring-gray-900/5">
         <button class="seat" style="grid-area: box-1">1</button>
@@ -46,7 +56,7 @@
      
 <aside class="unfomation">
 
-  <h2>Réserver une place</h2>
+  <h2 class="text-xl m-2 font-bold">Réserver une place</h2>
   <form id="reserveForm">
     <label for="reserveName">Nom et Prénom</label>
     <input type="text" id="reserveName" placeholder="Nom complet" required>
@@ -83,7 +93,7 @@
 
   <hr>
 
-  <h2>Modifier une place</h2>
+  <h2 class="text-xl m-2 font-bold">Modifier une place</h2>
   <form id="modifyForm">
     <label for="modifyPassenger">Passager</label>
     <select id="modifyPassenger" required>
@@ -106,7 +116,7 @@
 
   <hr>
 
-  <h2>Supprimer une réservation</h2>
+  <h2 class="text-xl m-2 font-bold">Supprimer une réservation</h2>
   <form id="deleteForm">
     <label for="deletePassenger">Passager</label>
     <select id="deletePassenger" required>
@@ -117,12 +127,6 @@
     <p id="deleteMessage" aria-live="polite"></p>
   </form>
 
-  <hr>
-
-  <h2>Statistiques</h2>
-  <p>Places libres : <span id="availableCount">20</span></p>
-  <p>Places occupées : <span id="occupiedCount">0</span></p>
-  <p>Recette totale : <span id="revenue">0</span> DH</p>
 
 </aside>
 
