@@ -44,7 +44,7 @@ function updateSeats() {
       seats[i].disabled = true;
     } else {
       seats[i].textContent = seatNumber;
-      seats[i].style.backgroundColor = "#26f471be";
+      seats[i].style.backgroundColor = "#11ab4ada";
       seats[i].style.color = "white";
       seats[i].disabled = false;
     }
